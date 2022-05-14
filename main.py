@@ -2,6 +2,7 @@ import pygame, sys
 from settings import *
 from level import Level
 
+# Test Comment
 # Pygame setup
 pygame.init()
 screen_width = 1200
