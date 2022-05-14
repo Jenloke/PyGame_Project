@@ -12,6 +12,7 @@ screen = pygame.display.set_mode((screen_width,screen_height))
 clock = pygame.time.Clock()
 level = Level(level_map,screen)
 
+"""
 #define game variables
 scroll = 0
 
@@ -35,7 +36,7 @@ def draw_bg():
 def draw_ground():
   for x in range(15):
     screen.blit(ground_image, ((x * ground_width) - scroll * 2.5, screen_height - ground_height))
-
+"""
 
 while True:
     for event in pygame.event.get():
@@ -44,6 +45,9 @@ while True:
             sys.exit()
 
     screen.fill('black')
+    level.run()
+
+    """
     #parallax bg
     draw_bg()
     draw_ground()
@@ -53,9 +57,7 @@ while True:
         scroll -= 5
     if key[pygame.K_RIGHT] and scroll < 1200:
         scroll += 5
-
-    
-    level.run()
+    """
 
     pygame.display.update()
     clock.tick(60)
